@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for ollama-webui-demo on 2024-02-06T11:03:35+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'ollama-webui-demo'
+primary_region = 'ord'
+
+[env]
+  OLLAMA_API_BASE_URL = 'http://localhost:11434/api'
+  WEBUI_SECRET_KEY = ''
+
+[[mounts]]
+  source = 'data'
+  destination = '/root/.ollama'
+  initial_size = '20gb'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+size = "performance-8x"
+memory = "16gb"
+gpu_kind = "l40s"
