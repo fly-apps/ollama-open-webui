@@ -10,10 +10,11 @@ primary_region = 'ord'
 [env]
   OLLAMA_API_BASE_URL = 'http://localhost:11434/api'
   WEBUI_SECRET_KEY = '' #generate a random hash and put it here
+  OLLAMA_MODELS = '/app/backend/data/models'
 
 [[mounts]]
   source = 'data'
-  destination = '/root/.ollama'
+  destination = '/app/backend/data'
   initial_size = '20gb'
 
 [http_service]

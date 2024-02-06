@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir -p /app/backend/data/models
+
 /bin/ollama serve &
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
