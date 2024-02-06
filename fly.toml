@@ -3,12 +3,13 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
+# change this before deploying!
 app = 'ollama-webui-demo'
 primary_region = 'ord'
 
 [env]
   OLLAMA_API_BASE_URL = 'http://localhost:11434/api'
-  WEBUI_SECRET_KEY = ''
+  WEBUI_SECRET_KEY = '' #generate a random hash and put it here
 
 [[mounts]]
   source = 'data'
