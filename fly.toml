@@ -7,7 +7,7 @@ app = ''               # change this before deploying!
 primary_region = 'ord'
 
 [env]
-OLLAMA_API_BASE_URL = 'http://localhost:11434/api'
+OLLAMA_BASE_URL = 'http://localhost:11434'
 OLLAMA_MODELS = '/app/backend/data/models'
 
 [[mounts]]
