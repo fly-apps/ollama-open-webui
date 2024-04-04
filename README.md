@@ -10,9 +10,11 @@ A demo running [Ollama](https://github.com/ollama/ollama) and [Open WebUI](https
 
 ## Deploy
 
+> [!NOTE]  
+> Running this requires the latest version of [flyctl](https://github.com/superfly/flyctl)
+
 ```bash
-fly apps create [app_name]
-fly deploy
+fly launch --from https://github.com/fly-apps/ollama-open-webui
 ```
 
 That's it! When you visit `https://[app].fly.dev` you should see the Open WebUI interface where you can log in and create the initial admin user.
