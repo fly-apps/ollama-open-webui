@@ -19,7 +19,7 @@ ___________
 
 ## Deploy
 
-Everyone loves a one-liner — let's clone the repo and deploy app with [flyctl](https://fly.io/docs/hands-on/install-flyctl/): 
+Everyone loves a one-liner — let's clone the repo and deploy the app with [flyctl](https://fly.io/docs/hands-on/install-flyctl/): 
 
 ```bash
 fly launch --from https://github.com/fly-apps/ollama-open-webui
