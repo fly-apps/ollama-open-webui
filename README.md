@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/fly-apps/ollama-open-webui/assets/3727384/25c0bc76-cf50-431d-8435-707fac9c2b1a">
-    <img height="100px" src="https://github.com/fly-apps/ollama-open-webui/assets/3727384/5659f0e4-c4c7-4a0a-9949-d8042564be45"
+    <img height="100px" src="https://github.com/fly-apps/ollama-open-webui/assets/3727384/5659f0e4-c4c7-4a0a-9949-d8042564be45"</img>
   </picture>
 </div>
 
@@ -12,10 +12,11 @@
 ___________
 
 <div align="center">
-  <img width="100%" alt="cover" src="https://github.com/fly-apps/ollama-webui-demo/assets/3727384/23b87769-ccde-46b9-a884-72c174a49f02">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/fly-apps/ollama-open-webui/assets/3727384/471dc098-e5f5-4d02-813d-c77fe891bf58">
+    <img src="https://github.com/fly-apps/ollama-open-webui/assets/3727384/22e90e1e-7a48-4628-8444-8135a0049adb"</img>
+  </picture>
 </div>
-
-
 
 ## Deploy
 
