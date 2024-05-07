@@ -25,7 +25,7 @@ Everyone loves a one-liner — let's clone the repo and deploy the app with [fly
 fly launch --from https://github.com/fly-apps/ollama-open-webui
 ```
 
-That's it! When you visit `https://[app].fly.dev` you should see the Open WebUI interface where you can log in and create the initial admin user. You can then optionally disable signups and make the app private by setting `ENABLE_SIGNUP = "false"` in your [fly.toml](./fly.toml)
+That's it! When you visit `https://[app].fly.dev` you should see the Open WebUI interface where you can log in and create the initial admin user. You can then optionally disable signups and make the app private by setting `ENABLE_SIGNUP = "false"` in your fly.toml [`env` variables section](https://fly.io/docs/reference/configuration/#the-env-variables-section).
 
 ## Having trouble?
 
