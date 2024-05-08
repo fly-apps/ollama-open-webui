@@ -28,6 +28,13 @@ fly launch --from https://github.com/fly-apps/ollama-open-webui
 
 That's it! When you visit `https://[app].fly.dev` you should see the Open WebUI interface where you can log in and create the initial admin user. You can then optionally disable signups and make the app private by setting `ENABLE_SIGNUP = "false"` in your fly.toml [`env` variables section](https://fly.io/docs/reference/configuration/#the-env-variables-section).
 
+> [!IMPORTANT]  
+> By default, the app runs on Fly GPUs — Nvidia L40s to be exact. This can be customized in the fly.toml [`vm` settings](https://github.com/fly-apps/ollama-open-webui/blob/e168239c26fb2548ee26d1e44e1df3ab1278497d/fly.toml#L26). It will _probably_ run on a standard Fly Machine because Ollama does leverage llama.cpp — but performance will be drastically reduced.
+
+## Scaling to Zero
+
+By default, the app does scale-to-zero. This is recommended (especially with GPUs) to save on costs. When the app receives a new request from the proxy, the Machine will boot in ~3s with the Web UI server ready to serve requests in ~15s. Loading models into VRAM can take a bit longer, depending on the size of the model.
+
 ## Having trouble?
 
 Create an issue or ask a question here: https://community.fly.io/
