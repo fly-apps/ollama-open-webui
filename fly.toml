@@ -7,6 +7,7 @@ app = ''               # change this before deploying!
 primary_region = 'ord'
 
 [env]
+DEFAULT_MODEL = 'llama3.1:8b'
 OLLAMA_BASE_URL = 'http://localhost:11434'
 OLLAMA_MODELS = '/app/backend/data/models'
 
