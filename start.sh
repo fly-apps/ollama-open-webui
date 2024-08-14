@@ -4,6 +4,17 @@ mkdir -p /app/backend/data/models
 
 /bin/ollama serve &
 
+# Wait until Ollama service is up and running
+until curl -s http://localhost:11434 > /dev/null; do 
+  echo 'Waiting for Ollama service to start...'; 
+  sleep 1; 
+done 
+
+if ! [ -e "$DEFAULT_MODEL" ]; then
+  echo "Pulling default model: $DEFAULT_MODEL"
+  ollama pull $DEFAULT_MODEL &
+fi
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd "$SCRIPT_DIR" || exit
 
