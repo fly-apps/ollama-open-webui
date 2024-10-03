@@ -6,6 +6,8 @@ FROM ghcr.io/open-webui/open-webui:latest
 
 COPY --from=ollama / /
 
+RUN apt-get update && apt-get install -y git
+
 WORKDIR /app/backend
 
 COPY start.sh ./

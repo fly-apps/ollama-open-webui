@@ -34,4 +34,9 @@ if test "$WEBUI_SECRET_KEY $WEBUI_JWT_SECRET_KEY" = " "; then
   WEBUI_SECRET_KEY=`cat $KEY_FILE`
 fi
 
+git init /app/backend
+git -C /app/backend config user.email "ollama@example.com"
+git -C /app/backend config user.name "Ollama McLlamaface"
+git -C /app/backend commit --allow-empty -m "Initial commit"
+
 WEBUI_SECRET_KEY="$WEBUI_SECRET_KEY" exec uvicorn open_webui.main:app --host 0.0.0.0 --port 8080 --forwarded-allow-ips '*'
